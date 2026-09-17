@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#F8FAFC" />
+  <rect x="100" y="200" width="150" height="230" rx="16" fill="#264653" />
+  <rect x="300" y="200" width="150" height="230" rx="16" fill="#2A9D8F" />
+  <rect x="500" y="200" width="150" height="230" rx="16" fill="#E9C46A" />
+  <rect x="700" y="200" width="150" height="230" rx="16" fill="#F4A261" />
+  <rect x="900" y="200" width="150" height="230" rx="16" fill="#E76F51" />
+
+  <text x="600" y="120" font-family="sans-serif" font-weight="900" font-size="64" fill="#0F172A" text-anchor="middle">Color Palette Generator</text>
+  <text x="600" y="520" font-family="sans-serif" font-weight="500" font-size="32" fill="#475569" text-anchor="middle">Create beautiful color schemes in seconds.</text>
+</svg>
