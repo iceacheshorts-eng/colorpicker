@@ -28,7 +28,7 @@ export default function SavedPalettes({ onLoadPalette, refreshTrigger }: SavedPa
 
     if (palettes.length === 0) {
         return (
-            <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 border-dashed rounded-xl p-8 text-center text-slate-500 dark:text-slate-400">
+            <div className="bg-slate-50 border border-slate-200 border-dashed rounded-xl p-8 text-center text-slate-500">
                 No saved palettes yet. Save your favorite combinations here.
             </div>
         );
@@ -40,7 +40,7 @@ export default function SavedPalettes({ onLoadPalette, refreshTrigger }: SavedPa
                 <div
                     key={palette.id}
                     onClick={() => onLoadPalette(palette.colors)}
-                    className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm hover:shadow-md transition-all cursor-pointer"
+                    className="group bg-white border border-slate-200 rounded-xl p-3 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                     <div className="flex h-16 rounded-lg overflow-hidden mb-3">
                         {palette.colors.map((hex, i) => (
@@ -48,7 +48,7 @@ export default function SavedPalettes({ onLoadPalette, refreshTrigger }: SavedPa
                         ))}
                     </div>
                     <div className="flex items-center justify-between">
-                        <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                        <span className="text-xs font-medium text-slate-500">
                             {new Date(palette.createdAt).toLocaleDateString()}
                         </span>
                         <button

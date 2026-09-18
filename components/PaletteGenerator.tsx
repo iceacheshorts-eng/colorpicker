@@ -158,7 +158,7 @@ export default function PaletteGenerator() {
         <div className="space-y-12 w-full">
 
             {/* Controls */}
-            <div className="bg-white dark:bg-slate-900 p-4 md:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700">
+            <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-slate-200">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
 
                     <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
@@ -170,14 +170,14 @@ export default function PaletteGenerator() {
                             Generate palette
                         </button>
 
-                        <div className="flex items-center gap-2 w-full sm:w-auto bg-slate-50 dark:bg-slate-800 p-1.5 rounded-lg border border-slate-200 dark:border-slate-700">
+                        <div className="flex items-center gap-2 w-full sm:w-auto bg-slate-50 p-1.5 rounded-lg border border-slate-200">
                             <label htmlFor="mode" className="sr-only">Harmony Mode</label>
-                            <Settings2 size={16} className="text-slate-400 dark:text-slate-400 ml-2 hidden sm:block" />
+                            <Settings2 size={16} className="text-slate-400 ml-2 hidden sm:block" />
                             <select
                                 id="mode"
                                 value={mode}
                                 onChange={(e) => setMode(e.target.value as HarmonyMode)}
-                                className="bg-transparent text-sm font-medium text-slate-700 dark:text-slate-200 py-1.5 px-2 outline-none w-full sm:w-auto cursor-pointer"
+                                className="bg-transparent text-sm font-medium text-slate-700 py-1.5 px-2 outline-none w-full sm:w-auto cursor-pointer"
                             >
                                 {HARMONY_MODES.map(m => (
                                     <option key={m.value} value={m.value}>{m.label}</option>
@@ -189,7 +189,7 @@ export default function PaletteGenerator() {
                     <div className="flex flex-wrap items-center gap-4 w-full lg:w-auto justify-between lg:justify-end">
                         <div className="flex items-center gap-2">
                              <div className="relative">
-                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-400 font-mono text-sm">#</span>
+                                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-mono text-sm">#</span>
                                 <input
                                     type="text"
                                     placeholder="Seed (e.g. 4F46E5)"
@@ -202,14 +202,14 @@ export default function PaletteGenerator() {
                                             setSeedError('');
                                         }
                                     }}
-                                    className="pl-7 pr-3 py-2 text-sm border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 w-36 font-mono"
+                                    className="pl-7 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 w-36 font-mono"
                                 />
                              </div>
                              <input
                                 type="color"
                                 value={`#${normalizeHex(seedInput) || '000000'}`}
                                 onChange={(e) => setSeedInput(e.target.value.replace('#', ''))}
-                                className="w-10 h-10 p-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg cursor-pointer"
+                                className="w-10 h-10 p-1 bg-white border border-slate-200 rounded-lg cursor-pointer"
                                 title="Pick a seed color"
                              />
                         </div>
@@ -217,14 +217,14 @@ export default function PaletteGenerator() {
                         <div className="flex items-center gap-2">
                             <button
                                 onClick={handleSave}
-                                className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:bg-slate-800 hover:text-indigo-600 transition-colors flex items-center gap-2"
+                                className="px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-indigo-600 transition-colors flex items-center gap-2"
                             >
                                 <Save size={16} />
                                 <span className="hidden sm:inline">{saveSuccess ? 'Saved!' : 'Save palette'}</span>
                             </button>
                             <button
                                 onClick={handleShare}
-                                className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:bg-slate-800 hover:text-indigo-600 transition-colors flex items-center gap-2"
+                                className="px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:text-indigo-600 transition-colors flex items-center gap-2"
                             >
                                 <Share size={16} />
                                 <span className="hidden sm:inline">{shareSuccess ? 'Copied URL!' : 'Share'}</span>
@@ -261,7 +261,7 @@ export default function PaletteGenerator() {
                     </div>
                 ))}
                 {colors.length === 0 && (
-                     <div className="w-full h-64 md:h-full flex items-center justify-center bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 border-dashed text-slate-400 dark:text-slate-400">
+                     <div className="w-full h-64 md:h-full flex items-center justify-center bg-slate-50 rounded-xl border border-slate-200 border-dashed text-slate-400">
                          Generating...
                      </div>
                 )}
@@ -270,13 +270,13 @@ export default function PaletteGenerator() {
             <div className="grid lg:grid-cols-3 gap-8 items-start pt-8">
                 {/* Export section */}
                 <div className="lg:col-span-1 space-y-4">
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-slate-50">Export your palette</h3>
+                    <h3 className="text-lg font-bold text-slate-900">Export your palette</h3>
                     <ExportPanel palette={colors} />
                 </div>
 
                 {/* Saved Palettes Section */}
                 <div className="lg:col-span-2 space-y-4">
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-slate-50">Saved palettes</h3>
+                    <h3 className="text-lg font-bold text-slate-900">Saved palettes</h3>
                     <SavedPalettes
                         onLoadPalette={loadSavedPalette}
                         refreshTrigger={savedPalettesRefresh}

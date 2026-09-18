@@ -9,23 +9,23 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight mb-6 transition-colors">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
             Color Palette Generator
           </h1>
-          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed transition-colors">
+          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
             Create beautiful, accessible color palettes for websites, brands, apps, and creative projects in seconds.
           </p>
         </section>
 
         {/* Main Generator Tool */}
-        <section className="bg-white dark:bg-slate-950 p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
-           <Suspense fallback={<div className="h-[500px] flex items-center justify-center text-slate-500 dark:text-slate-400">Loading generator...</div>}>
+        <section>
+           <Suspense fallback={<div className="h-[500px] flex items-center justify-center text-slate-500">Loading generator...</div>}>
               <PaletteGenerator />
            </Suspense>
         </section>
 
         {/* Divider */}
-        <div className="w-full h-px bg-slate-200 dark:bg-slate-800 my-16 transition-colors"></div>
+        <div className="w-full h-px bg-slate-200 my-16"></div>
 
         {/* SEO and Education Content */}
         <div className="max-w-3xl mx-auto">
