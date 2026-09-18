@@ -2,8 +2,8 @@ export function SeoContent() {
   return (
     <div className="space-y-12">
       <section>
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">How to use this color palette generator</h2>
-        <ul className="list-disc pl-5 space-y-2 text-slate-600">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">How to use this color palette generator</h2>
+        <ul className="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-300">
           <li>Start with a random palette or enter a seed color.</li>
           <li>Choose a harmony mode.</li>
           <li>Lock colors you like.</li>
@@ -14,15 +14,15 @@ export function SeoContent() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">Why color palettes matter</h2>
-        <p className="text-slate-600 leading-relaxed">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">Why color palettes matter</h2>
+        <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
           Consistent colors make products feel more recognizable, polished, and easier to use. A well-designed color palette can establish brand identity, guide user attention to important elements, and create an emotional connection with your audience. Whether you&apos;re building a simple landing page or a complex web application, starting with a strong palette is essential for a professional look and feel.
         </p>
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">Tips for choosing accessible colors</h2>
-        <ul className="list-disc pl-5 space-y-2 text-slate-600">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">Tips for choosing accessible colors</h2>
+        <ul className="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-300">
           <li><strong>Test text against backgrounds:</strong> Ensure there is enough contrast for readability.</li>
           <li><strong>Use high contrast for body text:</strong> Aim for at least a 4.5:1 ratio for normal text.</li>
           <li><strong>Reserve low-contrast colors for decoration:</strong> Use subtle colors only for non-essential visual elements.</li>
@@ -72,12 +72,12 @@ export function FAQ() {
 
   return (
     <section className="mt-16">
-      <h2 className="text-2xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+      <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-8">Frequently Asked Questions</h2>
       <div className="space-y-6">
         {faqs.map((faq, i) => (
-          <div key={i} className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">{faq.question}</h3>
-            <p className="text-slate-600">{faq.answer}</p>
+          <div key={i} className="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50 mb-2">{faq.question}</h3>
+            <p className="text-slate-600 dark:text-slate-300">{faq.answer}</p>
           </div>
         ))}
       </div>

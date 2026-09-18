@@ -35,7 +35,7 @@ export default function ColorCard({ hex, isLocked, onToggleLock }: ColorCardProp
   };
 
   return (
-    <div className="flex flex-col md:h-[400px] rounded-xl overflow-hidden shadow-sm border border-slate-200 transition-transform bg-white w-full group">
+    <div className="flex flex-col md:h-[400px] rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 transition-transform bg-white dark:bg-slate-900 w-full group">
       {/* Color Swatch Area */}
       <div
         className="flex-grow flex flex-col justify-end p-4 relative min-h-[120px] md:min-h-0 cursor-pointer"
@@ -67,7 +67,7 @@ export default function ColorCard({ hex, isLocked, onToggleLock }: ColorCardProp
       </div>
 
       {/* Details Area - Hidden on small mobile, visible on tablet+ */}
-      <div className="p-4 bg-white hidden md:block">
+      <div className="p-4 bg-white dark:bg-slate-900 hidden md:block">
         <div className="flex items-center justify-between mb-3">
            <button
               onClick={handleCopy}
@@ -80,7 +80,7 @@ export default function ColorCard({ hex, isLocked, onToggleLock }: ColorCardProp
            </button>
         </div>
 
-        <div className="space-y-1 mb-4 text-xs text-slate-500 font-mono">
+        <div className="space-y-1 mb-4 text-xs text-slate-500 dark:text-slate-400 font-mono">
             <div className="flex justify-between">
                 <span>RGB</span>
                 <span>{r}, {g}, {b}</span>
@@ -92,13 +92,13 @@ export default function ColorCard({ hex, isLocked, onToggleLock }: ColorCardProp
         </div>
 
         <div className="pt-3 border-t border-slate-100">
-           <div className="text-xs font-medium text-slate-700 mb-1 flex items-center justify-between">
+           <div className="text-xs font-medium text-slate-700 dark:text-slate-200 mb-1 flex items-center justify-between">
                <span>Text on this color</span>
                <span className="flex items-center gap-1">
                    Use <span className="inline-block w-3 h-3 rounded-full border border-slate-300" style={{ backgroundColor: textColor }}></span> {textColorHex === '000000' ? 'Black' : 'White'}
                </span>
            </div>
-           <div className="text-[10px] text-slate-500">
+           <div className="text-[10px] text-slate-500 dark:text-slate-400">
                {contrastLabel} ({contrastRatio.toFixed(1)}:1)
            </div>
         </div>
